@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
   "short_name": "Q-Railing",
   "name": "Q-Railing ToDos",
-=======
-  "short_name": "React App",
-  "name": "Create React App Sample",
->>>>>>> c9c371c (Initialize project using Create React App)
   "icons": [
     {
       "src": "favicon.ico",
