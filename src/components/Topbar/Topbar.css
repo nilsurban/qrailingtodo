@@ -1,0 +1,29 @@
+header {
+  width: 100vw;
+  height: 73px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.topbar {
+  display: flex;
+  max-width: 1335px; 
+  align-items: center;
+  width: 100%;
+}
+
+.logo-box {
+  width: 72px;
+  height: 73px;
+  background-color: #04468b;
+  color: white;
+  margin-left: 1px;
+  font-size: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
