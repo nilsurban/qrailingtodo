@@ -20,7 +20,7 @@ const App = () => {
 
   //#region useEffect
   useEffect(() => {
-    axios.get("http://localhost:3000/tasks").then((res) => setTasks(res.data));
+    axios.get(`${process.env.REACT_APP_API_URL}/tasks`).then((res) => setTasks(res.data));
   }, []);
   //#endregion
 
@@ -49,7 +49,7 @@ const App = () => {
         };
 
         // API-Request an das Backend
-        const response = await axios.post("http://localhost:3000/tasks", newTask);
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/tasks`, newTask);
 
         if (response.status === 201) {
           setTasks([...tasks, response.data]);
@@ -74,7 +74,7 @@ const App = () => {
     const handleDeleteTask = async (taskId: number) => {
       try {
         // API-Request zum Löschen der Aufgabe
-        const response = await axios.delete(`http://localhost:3000/tasks/${taskId}`);
+        const response = await axios.delete(`${process.env.REACT_APP_API_URL}/tasks/${taskId}`);
     
         if (response.status === 200) {
           setTasks((prevTasks) => prevTasks.filter((task) => task.id !== taskId));
